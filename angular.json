@@ -23,9 +23,32 @@
               "src/assets"
             ],
             "styles": [
+              "src/vendor/bootstrap/css/bootstrap.min.css",
+              "src/vendor/font-awesome/css/font-awesome.min.css",
+              "src/css/custom.css",
+              "src/css/fontastic.css",
+              "src/css/grasp_mobile_progress_circle-1.0.0.min.css",
+              "src/css/style.blue.css",
+              "src/css/style.default.css",
+              "src/css/style.green.css",
+              "src/css/style.pink.css",
+              "src/css/style.red.css",
+              "src/css/style.sea.css",
+              "src/css/style.violet.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/vendor/jquery/jquery.min.js",
+              "src/vendor/popper.js/umd/popper.min.js",
+              "src/vendor/bootstrap/js/bootstrap.min.js",
+              "src/js/grasp_mobile_progress_circle-1.0.0.min.js",
+              "src/vendor/jquery.cookie/jquery.cookie.js",
+              "src/vendor/chart.js/Chart.min.js",
+              "src/vendor/jquery-validation/jquery.validate.min.js",
+              "src/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js",
+              "src/js/charts-home.js",
+              "src/js/front.js"
+            ]
           },
           "configurations": {
             "production": {
