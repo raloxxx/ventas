@@ -12,13 +12,15 @@ import { NopagefoundComponent } from './pages/nopagefound/nopagefound.component'
 
 import { ServicesModule } from './services/services.module';
 import { ClientDetailComponent } from './pages/client/client-detail.component';
+import { SaveZoneComponent } from './pages/zone/save-zone.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientComponent,
     NopagefoundComponent,
-    ClientDetailComponent
+    ClientDetailComponent,
+    SaveZoneComponent
   ],
   imports: [
     BrowserModule,

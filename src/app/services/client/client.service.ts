@@ -32,7 +32,7 @@ export class ClientService {
 
   }
 
-  guardarCliente( medico: Client ) {
+  guardarCliente( cliente: Client ) {
 
 		let url = URL_SERVICIOS + '/client';
 
@@ -51,7 +51,7 @@ export class ClientService {
 		// }else {
 		// creando
 		// url += '?token=' + this._usuarioService.token;
-		return this.http.post( url, medico );
+		return this.http.post( url, cliente );
 		// }
 	}
 }
