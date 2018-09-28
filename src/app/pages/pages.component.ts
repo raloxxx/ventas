@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagesComponent implements OnInit {
 
+  selector = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  btnToggle() {
+    this.selector = !this.selector;
   }
 
 }

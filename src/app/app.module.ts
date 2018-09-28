@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 
-import { PagesModule } from './pages/pages.module';
 
 import { ServicesModule } from './services/services.module';
 
@@ -14,6 +13,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PagesComponent } from './pages/pages.component';
 import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [

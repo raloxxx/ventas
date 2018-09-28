@@ -43,10 +43,8 @@
               "src/vendor/bootstrap/js/bootstrap.min.js",
               "src/js/grasp_mobile_progress_circle-1.0.0.min.js",
               "src/vendor/jquery.cookie/jquery.cookie.js",
-              "src/vendor/chart.js/Chart.min.js",
               "src/vendor/jquery-validation/jquery.validate.min.js",
               "src/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js",
-              "src/js/charts-home.js",
               "src/js/front.js"
             ]
           },

@@ -3,7 +3,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
-import { ClientService, ZoneService } from './service.index';
+import { 
+        ClientService, 
+        ZoneService, 
+        ProductService
+} from './service.index';
 
 @NgModule({
   imports: [
@@ -13,7 +17,8 @@ import { ClientService, ZoneService } from './service.index';
   declarations: [],
   providers: [
     ClientService,
-    ZoneService
+    ZoneService,
+    ProductService
   ]
 })
 export class ServicesModule { }

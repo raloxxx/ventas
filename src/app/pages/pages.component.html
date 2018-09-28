@@ -1,4 +1,4 @@
-<nav class="side-navbar">
+<nav class="side-navbar" [ngClass]="{'shrink show-sm': selector}" >
     <div class="side-navbar-wrapper">
       <!-- Sidebar Header    -->
       <div class="sidenav-header d-flex align-items-center justify-content-center">
@@ -13,27 +13,27 @@
       <div class="main-menu">
         <h5 class="sidenav-heading">Menu</h5>
         <ul id="side-main-menu" class="side-menu list-unstyled">                  
-          <li><a href="index.html"> <i class="icon-home"></i>Inicio</a></li>
-          <li><a href="forms.html"> <i class="icon-form"></i>Productos</a></li>
+          <li><a routerLink="/"> <i class="icon-home"></i>Inicio</a></li>
+          <li><a routerLink="/product"> <i class="icon-form"></i>Productos</a></li>
           <li><a routerLink="/client"> <i class="fa fa-bar-chart"></i>Clientes</a></li>
-          <li><a href="tables.html"> <i class="icon-grid"></i>Ventas</a></li>
+          <li><a routerLink="/sale"> <i class="icon-grid"></i>Ventas</a></li>
         </ul>
       </div>
       <div class="admin-menu">
         <h5 class="sidenav-heading">Otras opciones</h5>
         <ul id="side-admin-menu" class="side-menu list-unstyled"> 
-          <li> <a routerLink="/save-zone"> <i class="icon-screen"> </i>Zonas</a></li>
+          <li> <a routerLink="/zone"> <i class="icon-screen"> </i>Zonas</a></li>
         </ul>
       </div>
     </div>
   </nav>
   
-  <div class="page">
+  <div class="page" [ngClass]="{'active  active-sm': selector}">
     <header class="header">
       <nav class="navbar">
         <div class="container-fluid">
           <div class="navbar-holder d-flex align-items-center justify-content-between">
-            <div class="navbar-header"><a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
+            <div class="navbar-header"><a id="toggle-btn"  (click)="btnToggle()" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
                 <div class="brand-text d-none d-md-inline-block"><strong class="text-primary">Carnes Maldonado</strong></div></a></div>
             <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
               <!-- Notifications dropdown-->
