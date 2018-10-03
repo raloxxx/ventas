@@ -11,6 +11,11 @@ import { Product } from '../../models/product.model';
 export class SaveSaleComponent implements OnInit {
 
   productos: Product[] = [];
+  id = '';
+  precio_mayor: number;
+  peso: number;
+  detalle = '';
+  productos_select = [];
 
 
   producto = new Product('', '', '', '', '');
@@ -31,8 +36,22 @@ export class SaveSaleComponent implements OnInit {
         });
   }
 
-  getProducto( id ){
-    console.log(id);
+  getProducto( list ){
+    let arr = list.split(',');
+
+    this.id = arr[0];
+    this.precio_mayor = arr[1];
+    this.detalle = arr[2];
   }
 
+  addProductToTable(){
+    for( let i = 0; i < this.productos_select.length; i++) {
+      if( this.productos_select[i][1] == this.detalle ){
+        this.productos_select[i][2] = this.peso;
+        this.productos_select[i][3] = this.peso*this.precio_mayor;
+        return;
+      }
+    }
+    this.productos_select.push([this.id, this.detalle, this.peso, this.peso*this.precio_mayor]);
+  }
 }

@@ -15,7 +15,7 @@
     <div class="card-body">
 
       <p>Completa todos los campos para poder proseguir con el registro.</p>
-      <form #f="ngForm" ngNativeValidate (ngSubmit)="guardarProducto(f)">
+      <form #f="ngForm" ngNativeValidate>
         <div class="row">
 
           <!--<div class="form-group col-lg-12">       
@@ -30,18 +30,18 @@
           <div class="form-group col-lg-8">       
             <label>Productos</label>
             
-            <select (change)="getProducto( $event.target.value )" [(ngModel)] ='producto.codigo' name="codigo" class="form-control" required>
+            <select (change)="getProducto( $event.target.value )"  name="detalle" class="form-control" required>
               <option value="">Seleccione un producto</option>
-              <option *ngFor="let producto of productos" [value]="producto.codigo">{{producto.detalle}}</option>
+              <option *ngFor="let producto of productos" [value]="[[producto._id, producto.precio_kilo_mayor, producto.detalle]]">{{producto.detalle}}</option>
             </select>
           </div>
         
           <div class="form-group col-lg-2">
             <label>Peso</label>
-            <input [(ngModel)]="producto.peso" type="text" placeholder="Peso" name="peso" class="form-control" required>
+            <input [(ngModel)]="peso" type="text" placeholder="Peso" name="peso" class="form-control" required>
           </div>
 
-          <button class="btn btn-primary">
+          <button class="btn btn-primary" (click)="addProductToTable()">
               <i class="fa fa-save"></i>
               Añadir
           </button>
@@ -62,22 +62,19 @@
                       
                       <thead>
                         <tr>
-                          <th><b>Codigo</b></th>
                           <th><b>Detalle</b></th>
-                          <th><b>Precio por mayor</b></th>
-                          <th><b>Precio por menor</b></th>
                           <th><b>Peso</b></th>
+                          <th><b>Costo</b></th>
                           <th></th>
                         </tr>
                       </thead>
                       <tbody>
           
-                        <tr *ngFor="let producto of productos">
-                          <td><b>{{producto.codigo}}</b></td>
-                          <td><b>{{producto.detalle}}</b></td>
-                          <td><b>S/ {{producto.precio_kilo_mayor}}.00</b></td>
-                          <td><b>S/ {{producto.precio_kilo_menor}}.00</b></td>
-                          <td><b>{{producto.peso}}</b></td>
+                        <tr *ngFor="let producto of productos_select">
+                          <td><b>{{producto[1]}}</b></td>
+                          <td><b>{{producto[2]}}</b></td>
+                          <td><b>S/ {{producto[3]}}.00</b></td>
+                          
                           <td> <button [routerLink]="['/product-detail', producto._id]" routerLinkActive="router-link-active"  class="btn btn-info"><i class="fa fa-edit"></i></button> </td>
                           
                         </tr>
